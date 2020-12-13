@@ -33,10 +33,6 @@ variable "principal_id" {
   type        = string
   description = "The Azure AD principal identity to give Contributor permissions on the Azure DNS zone to"
 }
-variable "subscription_id" {
-  type        = string
-  description = "The subscription id in which to create the Azure DNS zone"
-}
 variable "location" {
   type        = string
   default     = "australiaeast"
