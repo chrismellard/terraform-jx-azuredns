@@ -12,6 +12,9 @@ data "azurerm_dns_zone" "apex_domain_zone" {
   name  = var.apex_domain_name
 }
 
+data "azurerm_subscription" "current" {
+}
+
 resource "azurerm_resource_group" "dns" {
   count    = var.enabled ? 1 : 0
   name     = local.resource_group_name
